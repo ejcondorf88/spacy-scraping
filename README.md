@@ -2,18 +2,29 @@
 
 Este proyecto realiza un análisis de las 100 frases más famosas del cine según el listado de la AFI (American Film Institute), extraídas de Wikipedia. Utiliza técnicas de procesamiento de lenguaje natural para analizar tanto las frases como las palabras más comunes.
 
+## Características
+
+- Descarga automática de la tabla de frases desde Wikipedia
+- Análisis estadístico de años y películas con más frases célebres
+- Procesamiento de lenguaje natural para identificar verbos y adjetivos más comunes
+- Visualización de resultados en formato tabular
+
 ## Estructura del Proyecto
 
-- `Main.py`: Script principal que descarga la tabla de frases, la procesa y muestra estadísticas.
-- `analizador_frases.py`: Analiza estadísticas sobre los años y películas con más frases.
-- `analizador_palabras.py`: Analiza los verbos y adjetivos más comunes usando spaCy.
-- `requirements.txt`: Lista de dependencias necesarias.
+```
+.
+├── Main.py                 # Script principal
+├── analizador_frases.py    # Análisis de estadísticas por año y película
+├── analizador_palabras.py  # Análisis de verbos y adjetivos con spaCy
+├── requirements.txt        # Dependencias del proyecto
+└── README.md              # Este archivo
+```
 
 ## Requisitos
 
-- Python 3.8+
-- pip
-- Acceso a internet (para descargar la tabla de Wikipedia y el modelo de spaCy)
+- Python 3.8 o superior
+- pip (gestor de paquetes de Python)
+- Conexión a internet (para descargar datos y modelos)
 
 ## Instalación
 
@@ -22,7 +33,8 @@ Este proyecto realiza un análisis de las 100 frases más famosas del cine segú
    git clone <URL-del-repo>
    cd dispositivos-moviles/01
    ```
-2. **Crea y activa un entorno virtual (opcional pero recomendado):**
+
+2. **Crea y activa un entorno virtual (recomendado):**
    ```bash
    python -m venv venv
    # En Windows
@@ -30,10 +42,12 @@ Este proyecto realiza un análisis de las 100 frases más famosas del cine segú
    # En Mac/Linux
    source venv/bin/activate
    ```
+
 3. **Instala las dependencias:**
    ```bash
    pip install -r requirements.txt
    ```
+
 4. **Instala el modelo de spaCy para español:**
    ```bash
    python -m spacy download es_core_news_sm
@@ -41,223 +55,41 @@ Este proyecto realiza un análisis de las 100 frases más famosas del cine segú
 
 ## Uso
 
-Ejecuta el script principal:
-
-# Proyecto Python
-
-Una aplicación integral de Python que incluye web scraping, análisis de datos y capacidades de aprendizaje automático.
-
-## 📁 Estructura del Proyecto
-
-```
-├── .gitignore          # Configuración de Git ignore
-├── BasicScraping.py    # Funcionalidad básica de web scraping
-├── Main.py            # Punto de entrada principal de la aplicación
-├── Spicy.py           # Funcionalidad avanzada/especializada
-└── requirements.txt   # Dependencias del proyecto
-```
-
-## 🚀 Características
-
-Este proyecto incluye capacidades para:
-
-- **Web Scraping**: Herramientas básicas y avanzadas de extracción web
-- **Análisis de Datos**: Procesamiento y visualización de datos con pandas, matplotlib y seaborn
-- **Aprendizaje Automático**: Integración con TensorFlow/Keras para flujos de trabajo de ML
-- **Procesamiento de PDF**: Extracción y manipulación de texto en PDF
-- **Procesamiento de Audio**: Manejo de archivos de audio con librosa
-- **Desarrollo Web**: Soporte para frameworks Flask y Django
-- **Integración de APIs**: Servicios de API de Google
-- **Visualización de Datos**: Dashboards interactivos con Dash y Plotly
-
-## 🛠️ Instalación
-
-### Prerrequisitos
-
-- Python 3.8 o superior
-- Administrador de paquetes pip
-
-### Configuración
-
-1. **Clonar el repositorio**
-
-   ```bash
-   git clone <url-del-repositorio>
-   cd <directorio-del-proyecto>
-   ```
-
-2. **Crear un entorno virtual** (recomendado)
-
-   ```bash
-   python -m venv venv
-   ```
-
-3. **Activar el entorno virtual**
-
-   En Windows:
-
-   ```bash
-   venv\Scripts\activate
-   ```
-
-   En macOS/Linux:
-
-   ```bash
-   source venv/bin/activate
-   ```
-
-4. **Instalar dependencias**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## 📦 Dependencias Principales
-
-### Librerías Principales
-
-- **TensorFlow 2.18.0**: Aprendizaje automático y deep learning
-- **Django 5.1.6**: Framework web para desarrollo backend
-- **Flask 3.0.3**: Framework web ligero
-- **Pandas 2.2.3**: Manipulación y análisis de datos
-- **NumPy 2.0.2**: Computación numérica
-
-### Visualización de Datos
-
-- **Matplotlib 3.10.0**: Gráficos estáticos
-- **Seaborn 0.13.2**: Visualización estadística de datos
-- **Plotly 6.0.0**: Visualizaciones interactivas
-- **Dash 2.18.2**: Aplicaciones web de análisis
-
-### Herramientas Especializadas
-
-- **pdfplumber 0.11.5**: Extracción de texto de PDF
-- **librosa 0.10.2**: Análisis de audio
-- **nltk 3.9.1**: Procesamiento de lenguaje natural
-- **scikit-learn 1.6.1**: Algoritmos de aprendizaje automático
-- **yt-dlp 2025.1.26**: Descarga de YouTube y medios
-
-## 🎯 Uso
-
-### Ejecutar la Aplicación Principal
+Para ejecutar el análisis completo:
 
 ```bash
 python Main.py
 ```
 
-<<<<<<< HEAD
-El programa descargará la tabla de frases, mostrará estadísticas de los años y películas con más frases, y analizará los verbos y adjetivos más comunes en las frases.
+El programa realizará las siguientes acciones:
+1. Descargará la tabla de frases desde Wikipedia
+2. Mostrará estadísticas de años y películas con más frases
+3. Analizará los verbos y adjetivos más comunes
+4. Presentará los resultados en formato tabular
 
-## Notas
+## Solución de Problemas
 
-- Si ves advertencias sobre `read_html`, puedes ignorarlas por ahora, pero en el futuro será recomendable actualizar el código para usar `StringIO`.
-- El script requiere conexión a internet para descargar los datos y el modelo de spaCy la primera vez.
+- Si encuentras advertencias sobre `read_html`, estas son normales y no afectan el funcionamiento del programa
+- Asegúrate de tener una conexión estable a internet para la primera ejecución
+- Si el modelo de spaCy no se descarga correctamente, intenta ejecutar el comando de instalación manualmente
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
+1. Haz un fork del repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
 ## Autor
 
-- # [Tu Nombre]
+- Elian Condor
 
-### Scraping Básico
+## Contacto
 
-```bash
-python BasicScraping.py
-```
-
-### Características Avanzadas
-
-```bash
-python Spicy.py
-```
-
-## 📊 Capacidades
-
-### Web Scraping
-
-- Análisis básico de HTML y extracción de datos
-- Técnicas avanzadas de scraping
-- Manejo de solicitudes con headers apropiados y gestión de sesiones
-
-### Procesamiento de Datos
-
-- Procesamiento de archivos CSV/Excel
-- Extracción y análisis de texto PDF
-- Procesamiento de archivos de audio y extracción de características
-
-### Aprendizaje Automático
-
-- Desarrollo de modelos TensorFlow/Keras
-- Integración con Scikit-learn para ML tradicional
-- Preprocesamiento de datos e ingeniería de características
-
-### Visualización
-
-- Gráficos estáticos con Matplotlib/Seaborn
-- Dashboards interactivos con Plotly/Dash
-- Generación de nubes de palabras
-
-### Desarrollo Web
-
-- Desarrollo de API REST con Django
-- Aplicaciones web Flask
-- Manejo de CORS para solicitudes de origen cruzado
-
-## 🔧 Configuración
-
-Crear archivos de configuración necesarios para:
-
-- Conexiones de base de datos (configuración Django)
-- Claves API (servicios de Google)
-- Parámetros de scraping
-- Hiperparámetros de modelos
-
-## 📝 Desarrollo
-
-### Estructura del Código
-
-- `Main.py`: Lógica de aplicación principal y orquestación
-- `BasicScraping.py`: Operaciones fundamentales de web scraping
-- `Spicy.py`: Características avanzadas y funcionalidad especializada
-
-### Mejores Prácticas
-
-- Seguir las pautas de estilo PEP 8
-- Usar entornos virtuales para aislamiento de dependencias
-- Implementar manejo adecuado de errores
-- Agregar logging para depuración y monitoreo
-
-## 🤝 Contribuir
-
-1. Hacer fork del repositorio
-2. Crear una rama de característica (`git checkout -b feature/CaracteristicaIncreible`)
-3. Confirmar los cambios (`git commit -m 'Agregar alguna CaracteristicaIncreible'`)
-4. Hacer push a la rama (`git push origin feature/CaracteristicaIncreible`)
-5. Abrir un Pull Request
-
-## 📄 Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
-
-## 🆘 Soporte
-
-Si encuentras algún problema o tienes preguntas:
-
-1. Revisar la documentación
-2. Buscar en issues existentes
-3. Crear un nuevo issue con información detallada
-
-## 🔄 Actualizaciones
-
-Mantén tus dependencias actualizadas regularmente:
-
-```bash
-pip install --upgrade -r requirements.txt
-```
-
-## ⚠️ Notas Importantes
-
-- Asegúrate de tener suficiente espacio en disco para TensorFlow y otras dependencias grandes
-- Algunas características pueden requerir dependencias adicionales del sistema
-- El soporte GPU para TensorFlow puede requerir instalación de CUDA
-- Respeta robots.txt y límites de velocidad al hacer web scraping
-- Algunos módulos pueden requerir configuración adicional de variables de entorno
-- Se recomienda Python 3.8+ para compatibilidad completa con todas las librerías
-  > > > > > > > 3e19db659c6ace78821a526ee82f21978baa9a60
+Si tienes preguntas o sugerencias, no dudes en abrir un issue en el repositorio.

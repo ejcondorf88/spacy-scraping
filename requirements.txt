@@ -1,0 +1,5 @@
+pandas==2.1.0
+requests==2.31.0
+beautifulsoup4==4.12.2
+spacy==3.7.2
+es-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.7.0/es_core_news_sm-3.7.0.tar.gz 
